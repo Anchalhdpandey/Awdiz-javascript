@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    localStorage.setItem("name", "anchal");
+    localStorage.setItem("list", "[1,2,34,4]");
+    const dataFromLs = localStorage.getItem("name");
+    console.log(dataFromLs, "dataFromLs");
+    localStorage.removeItem("list");
+    localStorage.clear();
+    var myData = { name: "Anchal" };
+    var jsonData = JSON.stringify(myData);
+    console.log(jsonData, "jsonData browser");
+    var myData = { name: "awdiz", email: "abc@gmail.com", password: "pass@123" };
+    localStorage.setItem("data", JSON.stringify(myData))
+
+    const mydata = JSON.parse(localStorage.getItem("data"));
+    console.log(mydata)
+    console.log(mydata.name)
+  </script>
+</html>
